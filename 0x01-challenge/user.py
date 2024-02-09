@@ -5,20 +5,34 @@ User class
 
 
 class User():
-    """ Documentation """
+    """
+    Represents a user entity with email attribute.
+    """
 
     def __init__(self):
-        """ Documentation """
+        """
+        Initializes a User object with None email.
+        """
         self.__email = None
 
     @property
     def email(self):
-        """ Documentation """
+        """
+        Getter method to retrieve the email attribute.
+        """
         return self.__email
 
     @email.setter
     def email(self, value):
-        """ Documentation """
+        """
+        Setter method to set the email attribute.
+
+        Parameters:
+        - value (str): The email value to be set.
+
+        Raises:
+        - TypeError: If the provided value is not a string.
+        """
         if type(value) is not str:
             raise TypeError("email must be a string")
         self.__email = value
